@@ -2,6 +2,11 @@ framework:
   website: codeberg.org/fibers/fibers
   version: 1.3
 language:
-  default:
-    build_deps:
-      - guile-fibers
+  engines:
+    default:
+      build_deps:
+        - guile-fibers
+        - build-essential
+        - gcc
+        - guile-3.0
+        - guile-3.0-dev

@@ -205,6 +205,10 @@ clojure:
 julia:
   merly:
     - codeneomatrix
+  http.jl:
+    - klamike
+  mongoose:
+    - AbrJA
 scala:
   finatra:
     - cacoco

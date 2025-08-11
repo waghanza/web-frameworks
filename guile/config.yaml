@@ -1,6 +1,8 @@
 language:
   website: www.gnu.org/software/guile
   version: 3.0
+  files:
+    - "**/*.scm"
   engines:
     default:
       build_deps:
@@ -12,13 +14,7 @@ language:
 framework:
   engines:
     - default
-  files:
-    - "**/*.scm"
-  environment:
-    WORKER_CLASS: sync
-    GUILE_APP: server
-
-  command: "guile -L . -e '('$GUILE_APP')' -c '' $@"
+  command: "guile -L . -e '('server')' -c '' $@"
   # byte-compilation at O3 improves the requests/s by 10% (default is O2)
   bootstrap:
     - guild compile -O3 server.scm -o server.go
